@@ -18,6 +18,7 @@ const main = async () => {
     await db.delete(schema.challenges);
     await db.delete(schema.challengeOptions);
     await db.delete(schema.challengeProgress);
+    await db.delete(schema.userSubscription);
 
     await db.insert(schema.courses).values([
       {
@@ -181,21 +182,21 @@ const main = async () => {
     await db.insert(schema.challenges).values([
       {
         id: 4,
-        lessonId: 2, // Verbs
+        lessonId: 2, // Nouns
         type: "SELECT",
         order: 1,
         question: 'Which one of these it the "the man"?',
       },
       {
         id: 5,
-        lessonId: 2, // Verbs
+        lessonId: 2, // Nouns
         type: "ASSIST",
         order: 2,
         question: '"the man"',
       },
       {
         id: 6,
-        lessonId: 2, // Verbs
+        lessonId: 2, // Nouns
         type: "SELECT",
         order: 3,
         question: 'Which one of these it the "the robot"?',
