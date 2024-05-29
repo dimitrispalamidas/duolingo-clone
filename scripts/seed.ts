@@ -24,22 +24,22 @@ const main = async () => {
       {
         id: 1,
         title: "Spanish",
-        imageSrc: "/es.svg",
+        imageSrc: "sp.gif",
       },
       {
         id: 2,
         title: "Italian",
-        imageSrc: "/it.svg",
+        imageSrc: "/it.gif",
       },
       {
         id: 3,
         title: "French",
-        imageSrc: "/fr.svg",
+        imageSrc: "/fr.gif",
       },
       {
         id: 4,
         title: "Croatian",
-        imageSrc: "/hr.svg",
+        imageSrc: "/hr.gif",
       },
     ]);
 
@@ -113,21 +113,21 @@ const main = async () => {
     await db.insert(schema.challengeOptions).values([
       {
         challengeId: 1, // Which one of these is "the man"?
-        imageSrc: "/man.svg",
+        imageSrc: "/man.png",
         correct: true,
         text: "el hombre",
         audioSrc: "/es_man.mp3",
       },
       {
         challengeId: 1,
-        imageSrc: "/woman.svg",
+        imageSrc: "/woman.png",
         correct: false,
         text: "la mujer",
         audioSrc: "/es_woman.mp3",
       },
       {
         challengeId: 1,
-        imageSrc: "/robot.svg",
+        imageSrc: "/robot.png",
         correct: false,
         text: "el robot",
         audioSrc: "/es_robot.mp3",
@@ -158,21 +158,21 @@ const main = async () => {
     await db.insert(schema.challengeOptions).values([
       {
         challengeId: 3, // Which one of these is the "the robot"?
-        imageSrc: "/man.svg",
+        imageSrc: "/man.png",
         correct: false,
         text: "el hombre",
         audioSrc: "/es_man.mp3",
       },
       {
         challengeId: 3,
-        imageSrc: "/woman.svg",
+        imageSrc: "/woman.png",
         correct: false,
         text: "la mujer",
         audioSrc: "/es_woman.mp3",
       },
       {
         challengeId: 3,
-        imageSrc: "/robot.svg",
+        imageSrc: "/robot.png",
         correct: true,
         text: "el robot",
         audioSrc: "/es_robot.mp3",
