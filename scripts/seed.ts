@@ -5,12 +5,11 @@ import { neon } from "@neondatabase/serverless";
 import * as schema from "../db/schema";
 
 const sql = neon(process.env.DATABASE_URL!);
-// @ts-ignore
 const db = drizzle(sql, { schema });
 
 const main = async () => {
   try {
-    console.log("Seeding database");
+    console.log("Seeding database...");
 
     await db.delete(schema.courses);
     await db.delete(schema.userProgress);
@@ -24,7 +23,7 @@ const main = async () => {
       {
         id: 1,
         title: "Spanish",
-        imageSrc: "sp.gif",
+        imageSrc: "/sp.gif",
       },
       {
         id: 2,
@@ -38,8 +37,8 @@ const main = async () => {
       },
       {
         id: 4,
-        title: "Croatian",
-        imageSrc: "/hr.gif",
+        title: "Greek",
+        imageSrc: "/gr.gif",
       },
     ]);
 
@@ -70,19 +69,19 @@ const main = async () => {
         id: 3,
         unitId: 1, // Unit 1 (Learn the basics...)
         order: 3,
-        title: "Verbs",
+        title: "Abjectives",
       },
       {
         id: 4,
         unitId: 1, // Unit 1 (Learn the basics...)
         order: 4,
-        title: "Verbs",
+        title: "Adverbs",
       },
       {
         id: 5,
         unitId: 1, // Unit 1 (Learn the basics...)
         order: 5,
-        title: "Verbs",
+        title: "Conjunctions",
       },
     ]);
 
@@ -92,7 +91,7 @@ const main = async () => {
         lessonId: 1, // Nouns
         type: "SELECT",
         order: 1,
-        question: 'Which one of these is the "the man"?',
+        question: 'Which one of these it the "the man"?',
       },
       {
         id: 2,
@@ -106,7 +105,7 @@ const main = async () => {
         lessonId: 1, // Nouns
         type: "SELECT",
         order: 3,
-        question: 'Which one of these is the "the robot"?',
+        question: 'Which one of these it the "the robot"?',
       },
     ]);
 
@@ -157,7 +156,7 @@ const main = async () => {
 
     await db.insert(schema.challengeOptions).values([
       {
-        challengeId: 3, // Which one of these is the "the robot"?
+        challengeId: 3, // Which one of these is "the robot"?
         imageSrc: "/man.png",
         correct: false,
         text: "el hombre",
@@ -182,26 +181,27 @@ const main = async () => {
     await db.insert(schema.challenges).values([
       {
         id: 4,
-        lessonId: 2, // Verbs
+        lessonId: 2, // Nouns
         type: "SELECT",
         order: 1,
-        question: 'Which one of these is the "the man"?',
+        question: 'Which one of these it the "the man"?',
       },
       {
         id: 5,
-        lessonId: 2, // Verbs
+        lessonId: 2, // Nouns
         type: "ASSIST",
         order: 2,
         question: '"the man"',
       },
       {
         id: 6,
-        lessonId: 2, // Verbs
+        lessonId: 2, // Nouns
         type: "SELECT",
         order: 3,
-        question: 'Which one of these is the "the robot"?',
+        question: 'Which one of these it the "the robot"?',
       },
     ]);
+
     console.log("Seeding finished");
   } catch (error) {
     console.error(error);
