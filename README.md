@@ -4,7 +4,7 @@
 This is a repository for a Full Stack Spotify Clone with Next.js 14, React, Tailwind, Drizzle, Stripe.
 
 ## Live Demo
-• https://spotify-clone-delta-five.vercel.app
+• https://duolingo-clone-blue.vercel.app/
 
 ## Demo Info
 Just click on the 'Start' Popup to start your lesson tour.
