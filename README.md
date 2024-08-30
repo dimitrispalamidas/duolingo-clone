@@ -1,7 +1,7 @@
 # Getting Started
 
 ## Description
-This is a repository for a Full Stack Spotify Clone with Next.js 14, React, Tailwind, Drizzle, Stripe.
+This is a repository for a Full Stack Duolingo Clone with Next.js 14, React, Tailwind, Drizzle, Stripe.
 
 ## Live Demo
 • https://duolingo-clone-blue.vercel.app/
